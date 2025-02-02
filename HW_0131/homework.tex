@@ -22,6 +22,12 @@
 
 \begin{document}
 
+\section*{Book}
+
+Dunham\_Chapter6.pdf
+
+~
+
 \section*{Question 1}
 
 ~
@@ -33,7 +39,7 @@
         &p(y)=(y-\frac{a_{n-1}}{n})^n+a_{n-1}(y-\frac{a_{n-1}}{n})^{n-1}+...+a_1(y-\frac{a_{n-1}}{n})+a_0\\
         &\text{To look at the }(n-1)\text{th term, it is sufficient to look at the }n\text{th term and }(n-1)\text{th term}\\
         &\text{Since all terms after }n-1\text{ cannot produce a term with degree }n-1\\
-        \Rightarrow&p(y)=\sum_{i=0}^{n}\binom{n}{i}y^i(-\frac{a_{n-1}}{n})^{n-i}+a_{n-1}\sum_{i=0}^{n}\binom{n-1}{i}y^i(-\frac{a_{n-1}}{n})^{n-1-i}+...+a_1(y-\frac{a_{n-1}}{n})+a_0\\
+        \Rightarrow&p(y)=\sum_{i=0}^{n}\binom{n}{i}y^i(-\frac{a_{n-1}}{n})^{n-i}+a_{n-1}\sum_{i=0}^{n-1}\binom{n-1}{i}y^i(-\frac{a_{n-1}}{n})^{n-1-i}+...+a_1(y-\frac{a_{n-1}}{n})+a_0\\
         &\text{Looking at }(n-1)\text{th term}:\\
         &(y-\frac{a_{n-1}}{n})^n:\binom{n}{n-1}y^{n-1}(-\frac{a_{n-1}}{n})=-a_{n-1}y^{n-1}\\
         &a_{n-1}(y-\frac{a_{n-1}}{n})^{n-1}:a_{n-1}\binom{n-1}{n-1}y^{n-1}(-\frac{a_{n-1}}{n})^0=a_{n-1}y^{n-1}\\
