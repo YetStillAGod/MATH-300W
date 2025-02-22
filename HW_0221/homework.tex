@@ -1,0 +1,344 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\newtheorem{theorem}{Theorem}
+
+\begin{document}
+
+\section*{Book}
+
+~
+
+Euclid's Elements, Book I
+
+\newpage
+
+\section*{Problem 1}
+
+~
+
+\subsection*{(a)}
+
+~
+
+\begin{theorem}
+Let \( AB \) and \( CD \) be two line segments of equal length. If \( AB \) is closer to the eye at point \( O \) than \( CD \), then the angle subtended by \( AB \) at \( O \) is larger than the angle subtended by \( CD \) at \( O \) by Assumption (iv).
+\end{theorem}
+
+\begin{proof}
+
+~
+1. Let \( O \) be the position of the eye. Let \( AB \) and \( CD \) be two line segments of equal length, with \( AB \) closer to \( O \) than \( CD \).
+
+2. Connect \( OA \), \( OB \), \( OC \), and \( OD \).
+
+3. Since \( AB \) is closer to \( O \), the distances \( OA \) and \( OB \) are shorter than \( OC \) and \( OD \), respectively.
+
+4. The angle subtended by \( AB \) at \( O \) is \( \angle AOB \), and the angle subtended by \( CD \) at \( O \) is \( \angle COD \).
+
+5. By Sine Theorem, \( \sin\angle AOB >\sin\angle COD \), therefore \(\angle AOB >\angle COD\).
+
+6. Therefore, \( AB \) appears larger than \( CD \) when viewed from \( O \) by Assumption (iv).
+\end{proof}
+
+~
+
+\subsection*{(b)}
+
+~
+
+\begin{theorem}
+Let \( l \) and \( m \) be two parallel lines. When viewed from a point \( O \) not on either line, the distance between \( l \) and \( m \) appears to decrease as the lines extend further from \( O \).
+\end{theorem}
+
+\begin{proof}
+
+~
+1. Let \( l \) and \( m \) be two parallel lines. Let \( O \) be the position of the eye, not on either line.
+
+2. Draw visual rays from \( O \) to points \( A \) and \( B \) on \( l \) and \( m \), respectively, noting that \(A\) \(O\) \(B\) should not be collinear.
+
+3. As \( A \) and \( B \) move further away from \( O \) along \( l \) and \( m \), the angle \( \angle AOB \) decreases.
+
+4. The apparent distance between \( l \) and \( m \) is related to the angle \( \angle AOB \). As \( \angle AOB \) decreases, the lines \( l \) and \( m \) appear to converge, making the distance between them appear smaller, as proved in (a).
+
+5. Therefore, parallel lines appear to not be equally distant from each other when viewed from a distance.
+\end{proof}
+
+\newpage
+
+\section*{Problem 2}
+
+~
+
+\subsection*{(a)}
+
+\begin{theorem}
+In a quadrilateral \( ABCD \), if \( \angle DAB \) and \( \angle ABC \) are both right angles, and \( BC = AD \), then \( \angle BCD = \angle CDA \).
+\end{theorem}
+
+\begin{proof}
+
+~
+
+\begin{enumerate}
+    \item Consider quadrilateral \( ABCD \), where \( \angle DAB = \angle ABC = 90^\circ \) and \( BC = AD \).
+
+    \item find a point \(E\) on \(CD\) such that \(AE=BE\).
+
+    \item So \(\angle BAE=\angle ABE\).
+
+    \item \(\angle DAE=\angle BAD-\angle BAE=\angle ABC-\angle ABE=\angle CBE\).
+
+    \item Triangles \( ADE \) and \( BCE \) are congruent by SAS:
+       \begin{itemize}
+       \item \( BC = AD \)
+       \item \(\angle DAE=\angle CBE\)
+       \item \( AE=BE\).
+       \end{itemize}
+    \item Since \( \triangle ADE \cong \triangle BCE \), their corresponding angles are equal. Therefore, \( \angle BCD = \angle CDA \).
+
+    \item Thus, \( \angle BCD = \angle CDA \).
+\end{enumerate}
+ 
+\end{proof}
+
+~
+
+\subsection*{(b)}
+
+~
+
+\begin{theorem}
+Let \( E \) be the midpoint of \( AB \) and \( F \) be the midpoint of \( CD \). Then \( EF \) is perpendicular to both \( AB \) and \( CD \).
+\end{theorem}
+
+\begin{proof}
+
+~
+\begin{enumerate}
+    \item Connect \(CE\), \(DE\), \(AF\), \(BF\),
+
+    \item Triangles \( ADE \) and \( BCE \) are congruent by SAS:
+       \begin{itemize}
+       \item \( BC = AD \)
+       \item \(\angle DAE=\angle CBE\)
+       \item \( AE=BE\).
+       \end{itemize}
+
+    \item Since \( \triangle ADE \cong \triangle BCE \), \(DE=CE\) and \(\angle AED=\angle BEC\).
+
+    \item Triangles \( DEF \) and \( CEF \) are congruent by SSS:
+       \begin{itemize}
+       \item \( DE=CE \)
+       \item \(DF=CF\) since \(F\) is the midpoint of \(CD\)
+       \item \(EF\) is the common side.
+       \end{itemize}
+
+    \item Since \( \triangle DEF \cong \triangle CEF \), \(\angle DFE=\angle CFE\) and \(\angle FED=\angle FEC\).
+
+    \item \(\angle DFE=\angle CFE\) and \(\angle DFE+\angle CFE=180^\circ\)
+
+    \item So \(\angle DFE=\angle CFE=90^\circ\), and \(EF\perp CD\)
+
+    \item Since \(\angle FED=\angle FEC\) and \(\angle AED=\angle BEC\), \(\angle FED+\angle AED=\angle AEF=\angle FEC+\angle BEC=\angle BEF\).
+
+    \item Since \(\angle FEA=\angle FEB\) and \(\angle FEA+\angle FEB=180^\circ\)
+
+    \item So \(\angle FEA=\angle FEB=90^\circ\), and \(EF\perp AB\)
+
+    \item Conclusion: \(EF\perp AB\) and \(EF\perp CD\)
+    
+\end{enumerate}
+\end{proof}
+
+~
+
+\subsection*{(c)}
+
+~
+
+\begin{enumerate}
+    \item \begin{proof}
+        ~
+    Triangles \( ADE \) and \( BCE \) are congruent by SAS:
+       \begin{itemize}
+       \item \( UX = YX \)
+       \item \(\angle UXV=\angle YXW\) since they are opposite angles
+       \item \( VX=WX\) since \(X\) is the midpoint of \(VW\)
+       \end{itemize}
+    \end{proof}
+
+    \item \begin{enumerate}
+        \item connect \(UZ\).
+        
+        \item find a point \(M\) on \(\overline{UZ}\) such that \(UZ=ZM\).
+
+        \item connect \(MW\)
+
+        \item like before as proved, \(\triangle UZX \cong \triangle MZW\).
+
+        \item As \(\angle XUW\) is divided into 2 angles, and one is at most \(\frac{1}{2}\angle XUW\)
+
+        \item Without loss of generality, suppose \(\angle MUW \leq \frac{1}{2}\angle XUW\leq \frac{1}{4}\angle VUW\)
+
+        \item By this repetition, there must be an angle that is \(\frac{1}{2^n}\angle VUW < \alpha\)
+    \end{enumerate}
+\end{enumerate}
+
+\subsection*{(d)}
+
+\begin{theorem}
+In quadrilateral \( ABCD \), the two undetermined angles \( \angle BCD \) and \( \angle CDA \) cannot be obtuse.
+\end{theorem}
+
+\begin{proof}
+
+~
+\begin{enumerate}
+    \item From part (c), the angle sum of a triangle cannot exceed \( 180^\circ \).
+
+    \item In quadrilateral \( ABCD \), the sum of the angles cannot exceed \( 360^\circ \). Since \( \angle DAB = \angle ABC = 90^\circ \), the sum of \( \angle BCD \) and \( \angle CDA \) cannot exceed \( 180^\circ \).
+
+    \item Therefore, since \( \angle BCD =\angle CDA \), neither \( \angle BCD \) nor \( \angle CDA \) can be obtuse, as their sum would exceed \( 180^\circ \).
+\end{enumerate}
+\end{proof}
+
+~
+
+\subsection*{(e)}
+
+~
+
+\begin{proof}
+~
+\begin{enumerate}
+    \item Assume the undetermined angles \( \angle BCD \) and \( \angle CDA \) are acute.
+
+    \item In quadrilateral \(FEBC\), \(\angle BEF=\angle EFC=90^\circ\) and \(\angle EBC>\angle BCF\), by the Lemma, \(BE<CF\).
+
+    \item \(E,F\) are the midpoints, so \(\frac{1}{2}AB<\frac{1}{2}CD\), leading to \(AB<CD\).
+
+    \item Again, consider quadrilateral \(FEBC\), \(\angle BEF=\angle EBC=90^\circ\) and \(\angle EFC>\angle BCF\), by the Lemma, \(EF<BC\).
+
+    \item Since \(AD=BC\), \(EF<BC\) and \(EF<AD\).
+\end{enumerate}
+\end{proof}
+
+~
+
+\subsection*{(f)}
+
+~
+
+In hyperbolic geometry, parallel lines ``diverge" as they extend further from the observer. This means that the distance between them increases, and they do not remain equidistant.
+
+\newpage
+
+\section*{Problem 3}
+
+\subsection*{(a)}
+
+\begin{proof}
+~
+\begin{enumerate}
+    \item Apply the Euclidean algorithm:
+    \begin{align*}
+       32830 &= 3 \times 9147 + 5389\\
+       9147 &= 1 \times 5389 + 3758\\
+       5389 &=1\times3758+ 1631\\
+       3758 &= 2 \times 1631 + 496\\
+       1631 &= 3 \times 496 + 143\\
+       496 &= 3 \times 143 + 67\\
+       143 &= 2 \times 67 + 9\\
+       67 &= 7 \times 9 + 4\\
+       9 &= 2 \times 4 + 1\\
+       4 &= 4 \times 1 + 0\\
+   \end{align*}
+
+    \item \(\gcd(32830,9147)=1\).
+
+    \item The coefficient in the continued fraction expansion are the quotients in the Euclidean algorithm in the same order.
+\end{enumerate}
+\end{proof}
+
+~
+
+\subsection*{(b)}
+
+~
+
+\begin{proof}
+~
+\begin{enumerate}
+    \item  Apply the Euclidean algorithm:
+   \begin{align*}
+   223 &= 3 \times 71 + 10\\
+   71 &= 7 \times 10 + 1\\
+   10 &= 10 \times 1 + 0\\
+   \end{align*}
+
+    The continued fraction expansion is \( [3; 7, 10] \).
+\end{enumerate}
+\end{proof}
+
+\subsection*{(c)}
+
+\begin{proof}
+~
+\begin{enumerate}
+    \item Base Case: The fraction can be calculated to an integer, then the continued fraction expansion and the Euclidean algorithm both have one step, which is the integer as the quotient.
+
+    \item Induction Hypothesis: For all continued fraction expansion of length \(\leq k\), there are \(k\) steps in the Euclidean algorithm, with each quotient the same to the coeffient in the expansion with the same order.
+
+    \item Induction Step: suppose the final expansion is in the form \(a_{k-1}+\frac{b_k}{c_k}\), which \(a_{k-1}\) is the quotient, \(c_{k}\) is the divisor, and \(b_k\) is the remainder in the \(k\)th step in the Euclidean algorithm. \(\frac{b}{c_k}=\frac{1}{\frac{c_k}{b_k}}=\frac{1}{a_{k+1}+\frac{b_{k+1}}{b_k}}\). The \(k+1\)th step of the Euclidean algorithm is \(c_k= a_{k
+    +1} b_{k}+b_{k+1}\), which the quotient of \(k+1\)th step is \(a_{k+1}\), the same as the coefficient of the \(k+1\)th coefficient of the fraction expansion.
+
+    \item Induction Hypothesis is proven, and the relationship is proven.
+\end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Problem 4}
+
+\begin{theorem}
+Proclus's assumption is equivalent to Euclid's Parallel Postulate.
+\end{theorem}
+
+\begin{proof}
+
+~
+
+\begin{enumerate}
+    \item \textbf{Proclus's Assumption Implies the Parallel Postulate:}
+   \begin{enumerate}
+        \item If a straight line intersects one of two parallel lines, it must intersect the other.
+        \item The interior angles of parallel lines are \(180^\circ\), now with one line intersect with one of the parallel lines, the interior angle of the line and the other parallel line is less than \(180^\circ\)
+        \item Since the assumption states that they must intersect, two lines that the interior angle of the two is less than \(180^\circ\) must intersect, which is the Parallel Postulate.
+        
+        \item Proclus's Assumption can imply the Parallel Postulate.
+   \end{enumerate}
+
+    \item \textbf{Parallel Postulate Implies Proclus's Assumption:}
+   \begin{enumerate}
+        \item If the interior angles on one side of a transversal sum to less than \( 180^\circ \), the lines must intersect.
+        \item For these two lines, pick a point on one line to create a line parallel to the other, so the line intersects one of the parallel lines.
+        \item As Parallel Postulate states, the lines must intersect, so the line intersects one parallel line must intersects the other parallel line, which is Proclus's Assumption suggests.
+        \item Parallel Postulate can imply Proclus's Assumption.
+   \end{enumerate}
+
+    \item \textbf{Conclusion:}
+    
+    Proclus's assumption and the Parallel Postulate are equivalent.
+\end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+OK.
+
+\end{document}

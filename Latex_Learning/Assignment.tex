@@ -1,0 +1,81 @@
+\documentclass[10pt,letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{ulem}
+
+\author{Zian Kang}
+
+\begin{document}
+
+Send your instructor a TeX file whose PDF output looks \textbf{exactly} like this:
+
+\begin{enumerate}
+    \item YOUR NAME HERE
+
+    \item Here is a matrix:
+    $
+    \begin{bmatrix}
+        a & b & c \\
+        1 & 2 & 3 \\
+        \alpha & \beta & \gamma\\
+    \end{bmatrix}
+    $
+
+    \item Here are some math symbols:
+    \begin{multicols}{2}
+        \begin{itemize}
+            \item $\Longleftarrow$, $\Longrightarrow$, and $\Longleftrightarrow$
+            \item $\land$ means ``and;'' $\lor$ means ``or.''
+            \item $\displaystyle\lim_{x\to\infty}\frac{x}{e^x}=0$
+            \item $2\pi=\tau$
+            \item $\forall x\exists y(x+y=0)$
+            \item $\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}$
+            \item $\log_{100}(10^{10})=5$
+            \item \textbf{Bold text}
+            \item \textit{Italicized text}
+            \item \underline{Underlined text}
+        \end{itemize}
+    \end{multicols}
+
+    \item Let’s solve the equation $\displaystyle x + 5 = -\frac{5}{x}$ for $x$:
+    \begin{align*}
+        x+5&=-\frac{5}{x} \\
+        x+5+\frac{5}{x}&= 0 \\
+        x^2+5x+5&= 0 \\
+        x&=\frac{-5\pm\sqrt{5^2-4(5)(1)}}{2(1)} \\
+        x&=\frac{-5+\sqrt{5}}{2}\text{ or }x=\frac{-5-\sqrt{5}}{2}
+    \end{align*}
+
+    \item Sometimes when I’m writing a paragraph, I want my fractions to look small, like $\frac{10}{99}$. On the other hand, sometimes I want my fractions to look larger, like $\dfrac{10}{99}$. Note that $\frac{10}{99}\in\mathbb{Q}$, but $\frac{10}{99}\notin\mathbb{Z}$.
+
+    \item Here’s the truth table for the statement $P\land(Q\lor R)$:
+    
+    \begin{center}
+        \begin{tabular}{|c|c|c||c|c|}
+        \hline
+        $P$ & $Q$ & $R$ & $Q\lor R$ & $P\land (Q\lor R)$ \\
+        \hline
+        F & F & F & F & F \\ 
+        \hline
+        F & F & T & T & F \\ 
+        \hline
+        F & T & F & T & F \\ 
+        \hline
+        F & T & T & T & F \\ 
+        \hline
+        T & F & F & F & F \\ 
+        \hline
+        T & F & T & T & T \\ 
+        \hline
+        T & T & F & T & T \\ 
+        \hline
+        T & T & T & T & T \\ 
+        \hline
+    \end{tabular}
+    \end{center}
+\end{enumerate}
+
+\end{document}
