@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb , amsthm, graphicx,mathtools}
+
+\begin{document}
+
+\section*{Book}
+
+~
+
+Crest of the Peacock
+\newpage
+
+\section*{Question 1}
+
+~
+
+\begin{enumerate}
+    \item split 142884 into pairs of 2: 14, 28, 84
+    \item $3\times3=9\leq14$ is the largest number whose square is less than 14
+    \item $14-9=5$, so 28 becomes 528
+    \item find greatest $x :x(3\times 20+x)\leq 528\implies x=7$
+    \item $528-7\times 67=59$, so 84 becomes 5984
+    \item current root is 37
+    \item find greatest $x :x(37\times 20+x)\leq 5984\implies x=8$
+    \item $5984-8\times 748=0$, no remainder
+    \item $\sqrt{142884}=378$
+\end{enumerate}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{enumerate}
+    \item $x\coloneqq 300+h$
+    \item $p(x)=(300+h)^4-1212(x+h)^3+181579(x+h)^2+37287672x-190826960$
+    \item \begin{enumerate}
+        \item $(300+h)^4=1\cdot300^4+4\cdot 300^3h+6\cdot 300^2h^2+4\cdot300h^3+1\cdot h^4$
+        \item $(300+h)^3=1\cdot300^3+3\cdot 300^2h+3\cdot 300h^2+1\cdot h^3$
+        \item $(300+h)^2=1\cdot300^2+2\cdot300h+1\cdot h^2$
+        \end{enumerate}
+    \item substituting and simplified: $p(x)=h^4-12h^3-369221h^2-73004928h+2713584640$
+    \item Take the guess of the second digit 3
+    \item $h\coloneqq 30+p$
+    \item $p(x)=191623900 - 95082588 p - 364901 p^2 + 108 p^3 + p^4$
+    \item This leaves to $p=2$
+    \item So the number is 332.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{enumerate}
+    \item Use CRT:
+    \item $M=11\times 3\times 5=165$
+    \item $M_1=165/11=15,M_2=165/5=33,M_3=165/3=55$
+    \item $t_i\coloneqq {M_i}^{-1} \mod{m_i}$
+    \item \begin{enumerate}
+        \item $15t_1\equiv 1\mod{11}\implies t_1=3$
+        \item $33t_2\equiv 1\mod{5}\implies t_2=2$
+        \item $55t_3\equiv 1\mod{3}\implies t_3=1$
+    \end{enumerate}
+    \item So $N=3\times 3\times 15 + 2\times 2\times 33+1\times 1\times 55+165k=322+165k$
+    \item for $N\leq 165, k=-1,N=157$
+\end{enumerate}
+\end{document}
