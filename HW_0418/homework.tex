@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb , amsthm, graphicx,mathtools}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item \begin{align*}
+            &\binom{n-1}{k}+\binom{n-1}{k-1}\\
+            =&\frac{(n-1)!}{k!(n-1-k)!}+\dfrac{(n-1)!}{(k-1)!(n-k)!}\\
+            =&\dfrac{(n-k)(n-1)!}{k!(n-k)!}+\dfrac{k(n-1)!}{k!(n-k)!}\\
+            =&\dfrac{(n-k)(n-1)!+k(n-1)!}{k!(n-k)!}\\
+            =&\dfrac{n!}{k!(n-k)!}\\
+            =&\binom{n}{k}
+        \end{align*}
+        \item \begin{enumerate}
+            \item $\binom{n}{k}=\binom{n-1}{k}+\binom{n-1}{k-1}=\binom{n-2}{k}+\binom{n-2}{k-1}+\binom{n-1}{k-1}=...$
+            \item by this iteration on every $\binom{i}{k}$: $\binom{n}{k}=\binom{k}{k}+\sum_{j=k}^{n-1}\binom{j}{k-1}$
+            \item $\binom{k}{k}=1=\binom{k-1}{k-1}$
+            \item Substitution: $\binom{n}{k}=\binom{k-1}{k-1}+\sum_{j=k}^{n-1}\binom{j}{k-1}=\sum_{j=k-1}^{n-1}\binom{j}{k-1}$
+        \end{enumerate}
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item Set $AD\parallel A'D''$
+        \item $\angle OAB=\angle OA'B'',\angle ABO=\angle A'B''O, \angle OBC=\angle OB''C'', \angle OCD=\angle OC''D'', \angle OCB= \angle OC''B',\angle ODA= \angle OD''A'$
+        \item $\triangle ABO\sim \triangle A'B''O,\triangle CDO\sim \triangle C''D''O,\triangle BCO\sim \triangle B''C''O,\triangle ADO\sim \triangle A'D''O$
+        \item $\dfrac{AB}{A'B''}=\dfrac{AO}{A'O}=\dfrac{AD}{A'D''}$, $\dfrac{BC}{B''C''}=\dfrac{OD}{OD''}=\dfrac{CD}{C''D''}$
+        \item $\dfrac{(A,B;C,D)}{(A',B'';C'',D'')}=\dfrac{AB\cdot CD\cdot A'D''\cdot C''B''}{AD\cdot CB\cdot A'B''\cdot C''D''}$
+        \item $\dfrac{AB\cdot CD\cdot A'D''\cdot C''B''}{AD\cdot CB\cdot A'B''\cdot C''D''}=\dfrac{AB}{A'B''}\cdot\dfrac{CD}{C''D''}\cdot\dfrac{A'D''}{AD}\cdot\dfrac{C''B''}{CB}=\dfrac{AB}{A'B''}\cdot\dfrac{CD}{C''D''}\cdot\dfrac{1}{\frac{AB}{A'B''}}\cdot\dfrac{1}{\frac{CD}{C''D''}}=1$
+        \item So $(A,B;C,D)=(A',B'';C'',D'')$
+        \item $\dfrac{(A',B';C',D')}{(A',B'';C'',D'')}=\dfrac{A'B'\cdot C'D'\cdot A'D''\cdot C''B''}{A'D'\cdot C'B'\cdot A'B''\cdot C''D''}$
+        \item \begin{enumerate}
+            \item Menelaus theorem on $\triangle AC'C''$ with $OD'$: $\dfrac{A'D'}{D'C'}\cdot\dfrac{C'O}{C''O}\cdot\dfrac{C''D''}{A'D''}=1$
+            \item Menelaus theorem on $\triangle AC'C''$ with $OB'$: $\dfrac{A'B'}{B'C'}\cdot\dfrac{C'O}{C''O}\cdot\dfrac{C''B''}{A'B''}=1$
+        \end{enumerate}
+        \item $\dfrac{D'C'}{A'D'}\cdot\dfrac{C''O}{C'O}\cdot\dfrac{A'D''}{C''D''}\cdot \dfrac{A'B'}{B'C'}\cdot\dfrac{C'O}{C''O}\cdot\dfrac{C''B''}{A'B''}=1$
+        \item $\dfrac{A'B'\cdot C'D'\cdot A'D''\cdot C''B''}{A'D'\cdot C'B'\cdot A'B''\cdot C''D''}=1$
+        \item So $(A',B';C',D')=(A',B'';C'',D'')$
+        \item $(A,B;C,D)=(A',B';C',D')$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item Set the radius of the large sphere $r$ and the random distance above the equator of the sphere $-\dfrac{h}{2}\leq y\leq \dfrac{h}{2}$
+        \item Radius of the cylinder is $\sqrt{r^2-\left(\dfrac{h}{2}\right)^2}$ and radius for cross-section at $y$ is $\sqrt{r^2-y^2}$
+        \item The difference in area of these two is the area of the ring at height $y$: $\pi\left(-r^2+\left(\dfrac{h}{2}\right)^2+r^2-y^2\right)=\pi\left(\left(\dfrac{h}{2}\right)^2-y^2\right)$
+        \item Consider a sphere with radius $\dfrac{h}{2}$, the radius of one circle of the sphere at height $y$ is $\sqrt{\left(\dfrac{h}{2}\right)^2-y^2}$
+        \item The area of the circle is $\pi\left(\left(\dfrac{h}{2}\right)^2-y^2\right)$
+        \item The two areas are the same.
+        \item By Cavalieri’s principle, the two volumes with equal-sized of corresponding cross-sections are equal-volumed.
+        \item The ring and the $\dfrac{h}{2}$-radius sphere have the same volume.
+        \item The volume of the ring is independent of the radius $r$.
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+~
+
+\section*{Question 4}
+
+~
+
+\begin{enumerate}
+    \item $P(a,b)$ is the probability Cain wins when he needs $a$ points and Abel needs $b$ points.
+    \item $P(a,b)= 0.5P(a-1,b)+0.5P(a,b-1)$, $P(0,b)=1$, $P(a,0)=0$
+    \item \begin{align*}
+        &P(3,4)\\
+        =&0.5P(2,4)+0.5P(3,3)\\
+        =&0.25P(1,4)+0.5P(2,3)+0.25P(3,2)\\
+        =&0.125P(0,4)+0.375P(1,3)+0.375P(2,2)+0.125P(3,1)\\
+        =&0.125+0.1875P(0,3)+0.375P(1,2)+0.25P(2,1)+0.0625P(3,0)\\
+        =&0.125+0.1875+0.1875P(0,2)+0.3125P(1,1)+0.125P(2,0)\\
+        =&0.125+0.1875+0.1875+0.15625P(0,1)+0.15625P(1,0)\\
+        =&0.125+0.1875+0.1875+0.15625\\
+        =&0.65625\\
+    \end{align*}
+    \item $0.65625\times 64=42$, $64-42=22$
+    \item 42 apples for Cain and 22 apples for Abel.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item The proof is same as: $\forall n>2\in\mathbb{Z}: \exists p_\text{odd}, p_\text{odd}|n\lor 4|n$
+        \item For all integers greater than 2, it can only be the case that some odd primes divide it or no odd primes divide it.
+        \item If some odd primes divide it, then $\exists p_\text{odd}:p_\text{odd}|n$
+        \item If no odd primes divide it, then $n$ can only be the form of $2^k$ for some integer $k$.
+        \item Since $n>2$, $k\geq2$
+        \item $4=2^2$ must divides $2^k,k\geq 2$, so $4|n$
+        \item Combining the two cases: $\forall n>2\in\mathbb{Z}: \exists p_\text{odd}, p_\text{odd}|n\lor 4|n$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item Base Case ($n=1$): $y'=\sum_{k=0}^1 \binom{1}{k} u^{(k)}v^{(1-k)}=u'v+uv'$
+        \item Induction Hypothesis ($n=m$): $y^{(m)}=\sum_{k=0}^m \binom{m}{k} u^{(k)}v^{(m-k)}$
+        \item Induction Step ($n=m+1$):
+        \begin{enumerate}
+            \item $y^{(m+1)}=\frac{d}{dx}y^{(m)}=\frac{d}{dx}\sum_{k=0}^m \binom{m}{k} u^{(k)}v^{(m-k)}$ 
+            \item $\frac{d}{dx}\sum_{k=0}^m \binom{m}{k} u^{(k)}v^{(m-k)}=\sum_{k=0}^m \binom{m}{k} \left(u^{(k+1)}v^{(m-k)}+u^{(k)}v^{(m-k+1)}\right)$
+            \item $\sum_{k=0}^m \binom{m}{k} \left(u^{(k+1)}v^{(m-k)}+u^{(k)}v^{(m-k+1)}\right)=u^{m+1}v+\sum_{k=1}^m \binom{m}{k-1}u^{(k)}v^{(m-k+1)}+ \sum_{k=1}^m \binom{m}{k}u^{(k)}v^{(m-k+1)}+ uv^{(m+1)}$
+            \item $u^{m+1}v+\sum_{k=1}^m \binom{m}{k-1}u^{(k)}v^{(m-k+1)}+ \sum_{k=1}^m \binom{m}{k}u^{(k)}v^{(m-k+1)}+ uv^{(m+1)}= u^{m+1}v+\sum_{k=1}^m \left(\binom{m}{k-1}+\binom{m}{k}\right)u^{(k)}v^{(m-k+1)}+ uv^{(m+1)}$
+            \item $\binom{m}{k-1}+\binom{m}{k}=\binom{m+1}{k}$
+            \item $u^{m+1}v+\sum_{k=1}^m \left(\binom{m}{k-1}+\binom{m}{k}\right)u^{(k)}v^{(m-k+1)}+ uv^{(m+1)}=\binom{m+1}{m+1}u^{m+1}v+\sum_{k=1}^m \binom{m+1}{k}u^{(k)}v^{(m-k+1)}+ \binom{m+1}{0}uv^{(m+1)}= \sum_{k=0}^m \binom{m+1}{k}u^{(k)}v^{(m-k+1)}$
+            \item So $y^{(m+1)}= \sum_{k=0}^m \binom{m+1}{k}u^{(k)}v^{(m-k+1)}$
+        \end{enumerate}
+        \item By induction, $\forall n\in\mathbb{N}, y^{(n)}= \sum_{k=0}^m \binom{n}{k}u^{(k)}v^{(n-k)}$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 7}
+
+~
+
+\begin{enumerate}
+    \item Fermat’s Method of Adequality
+    \begin{enumerate}
+        \item $x\coloneqq 3+m, y\coloneqq 4+n$
+        \item $(3+m)^2+(4+n)^2=25$
+        \item $6m+8n+m^2+n^2=25$, where $m^2+n^2$ are negligible
+        \item $6m+8n\approx 0$
+        \item $\dfrac{n}{m}=-\dfrac{3}{4}$
+        \item Tangent is $-\dfrac{3}{4}$
+        \item $l: y=-\dfrac{3}{4}x+\dfrac{25}{4}$
+    \end{enumerate}
+    \item Descartes’ Strategy
+    \begin{enumerate}
+        \item Slope of radius is $\frac{4}{3}$
+        \item Normal line is $y=-\dfrac{4}{3}x$
+        \item Tangent slope perpendicular to normal slope is $-\dfrac{3}{4}$
+        \item Tangent line $y=-\dfrac{3}{4}x+\dfrac{25}{4}$
+    \end{enumerate}
+    \item Newton’s Fluxions
+    \begin{enumerate}
+        \item Differentiation: $2x\dot{x}+2y\dot{y}=0$
+        \item $\dfrac{\dot{y}}{\dot{x}}=-\dfrac{x}{y}$
+        \item $x=3,y=4$
+        \item $\dfrac{\dot{y}}{\dot{x}}=-\dfrac{3}{4}$
+        \item $l: y=-\dfrac{3}{4}x+\dfrac{25}{4}$
+    \end{enumerate}
+\end{enumerate}
+\end{document}

@@ -1,0 +1,224 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb , amsthm, graphicx,mathtools}
+
+\begin{document}
+
+\section*{Question 1}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item The trace forms a hypocycloid.
+        \item Given the rolling circle has radius $r$, the fixed circle has radius $R$, the equation for hypocycloid is:
+        \begin{enumerate}
+            \item[] $x(\theta)=(R-r)\cos\theta+r\cos\left(\dfrac{R-r}{r}\theta\right)$
+            \item[] $y(\theta)=(R-r)\sin\theta-r\sin\left(\dfrac{R-r}{r}\theta\right)$
+        \end{enumerate}
+        \item Substituting $R=1,r=\dfrac{1}{2}$:
+        \begin{enumerate}
+            \item[]  $x(\theta)=\dfrac{1}{2}\cos\theta+\dfrac{1}{2}\cos\theta=\cos\theta$
+            \item[]  $y(\theta)=\dfrac{1}{2}\sin\theta-\dfrac{1}{2}\sin\theta=0$
+        \end{enumerate}
+        \item So the trace lies on the x-axis and $-1\leq x\leq 1$.
+        \item Trace is the diameter of the large circle.
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 2}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item[(a)] \begin{enumerate}
+            \item[1.] $DE,EF$ are the asymptotes and $J$, $H$ are the points on the parabola;
+            \item[2.] $EK\cdot KJ=EM\cdot MH=t$
+            \item[3.] $\square DEMH$ and $\square BEMG$ are rectangles;
+            \item[4.] $DE=HM$ and $EM=BG$
+            \item[5.] So $EK\cdot KJ=EM\cdot MH=DE\cdot BG=BE\cdot AB$.
+        \end{enumerate}
+        \item[(b)] \begin{enumerate}
+            \item[1.] $\square BEKL$ is a rectangle;
+            \item[2.] $KL=BE,BL=EK$
+            \item[3.] $BL\cdot LJ=EK(LK+KJ)=EK(BE+KJ)$
+            \item[4.] $EK(BE+KJ)=EK\cdot BE+EK\cdot KJ=BE\cdot AB+EK\cdot BE=BE(AB+EK)=BE(BL+AB)=BE\cdot AL$
+            \item[5.] So $BL\cdot LJ=EK(BE+KJ)=BE(AB+EK)=BE\cdot AL$
+        \end{enumerate}
+        \item[(c)] \begin{enumerate}
+            \item[1.] $\angle AJC=90^\circ$ is $AC$ is a diameter and $J$ is a point on the circle;
+            \item[2.] $\angle AJL+\angle CJL=90^\circ,\angle JAL+\angle AJL=90^\circ,\angle JCL+\angle CJL=90^\circ$;
+            \item[3.] $\angle JAL=\angle CJL,\angle AJL=\angle JCL,\angle ALJ=\angle JLC=90^\circ$
+            \item[4.] $\triangle AJL\sim \triangle JCL$
+            \item[5.] $\dfrac{AJ}{LJ}=\dfrac{LJ}{CL}$
+        \end{enumerate} 
+        \item[(d)] \begin{enumerate}
+            \item[1.] $BL\cdot LJ=BE\cdot AL$;
+            \item[2.] $\dfrac{BE}{BL}=\dfrac{LJ}{AL}$
+            \item[3.] $\dfrac{BE^2}{BL^2}=\dfrac{LJ^2}{AL^2}$
+            \item[4.] $\dfrac{AJ}{LJ}=\dfrac{LJ}{CL}$
+            \item[5.] $LJ^2=AL\cdot CL$
+            \item[6.] $\dfrac{LJ^2}{AL^2}=\dfrac{CL}{AL}$
+            \item[7.] So $\dfrac{BE^2}{BL^2}=\dfrac{LJ^2}{AL^2}=\dfrac{CL}{AL}$
+        \end{enumerate}
+        \item[e] \begin{enumerate}
+            \item[1.] $AL=AB+BL,CL=BC-BL$
+            \item[2.] $\dfrac{BE^2}{BL^2}=\dfrac{CL}{AL}$
+            \item[3.] $\dfrac{BE^2}{BL^2}=\dfrac{BC-BL}{AB+BL}$
+            \item[4.] $BE^2(AB+BL)=BL^2(BC-BL)$
+        \end{enumerate}
+        \item[f] \begin{enumerate}
+            \item[1.] $BE=b,BC=a, AB =\dfrac{c^3}{b^2}$
+            \item[2.] $BE^2(AB+BL)=BL^2(BC-BL)$
+            \item[3.] So $b^2\left(\dfrac{c^3}{b^2}+BL\right)=BL^2(a-BL)$
+            \item[4.] $c^3+b^2BL=aBL^2-BL^3$
+            \item[5.] $BL^3++b^2BL+c^3=aBL^2$
+        \end{enumerate}
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+~
+
+\subsection*{(a)}
+~
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item Base Case: $f_5=5, 5|5$
+        \item Induction Hypothesis: $\forall n\in \mathbb{Z^+},5|f_{5n}\implies 5|f_{5(n+1)}$
+        \item Induction Step:
+        \begin{align*}
+            &5|f_{5n}\\
+            &f_{5(n+1)}\\
+            =&f_{5n+4}+f_{5n+3}\\
+            =&f_{5n+3}+f_{5n+2}+f_{5n+2}+f_{5n+1}\\
+            =&3f_{5n+2}+2f_{5n+1}\\
+            =&5f_{5n+1}+3f_{5n}\\
+            &5|5f_{5n+1}\land 5|3f_{5n}\\
+            \implies&5|f_{5(n+1)}\\
+        \end{align*}
+        \item Induction Hypothesis is true, $\forall n\in \mathbb{Z^+},5|f_{5n}$
+    \end{enumerate}
+\end{proof}
+
+~
+
+\subsection*{(b)}
+
+~
+
+\begin{proof}
+    \begin{enumerate}
+        \item Base Case: $n=2: f_3f_1=f_2+(-1)^2=2$
+        \item Induction Hypothesis: $\forall n\in \mathbb{Z^+}\setminus\{1\}:f_{n+1}f_{n-1}={f_n}^2+(-1)^n\implies f_{(n+1)+1}f_{(n+1)-1}={f_{n+1}}^2+(-1)^{n+1}$
+        \item Induction Step:
+        \begin{align*}
+            &f_{n+1}f_{n-1}={f_n}^2+(-1)^n\\
+            &{f_n}^2=f_{n+1}f_{n-1}+(-1)^{n+1}\\
+            &f_{(n+1)+1}f_{(n+1)-1}\\
+            =&(f_{n+1}+f_n)f_n\\
+            =&f_{n+1}f_{n}+{f_n}^2\\
+            =&f_{n+1}f_{n}+f_{n+1}f_{n-1}+(-1)^{n+1}\\
+            =&f_{n+1}(f_{n}+f_{n-1})+(-1)^{n+1}\\
+            =&{f_{n+1}}^2+(-1)^{n+1}\\
+        \end{align*}
+        \item Induction Hypothesis is true, $\forall n\in \mathbb{Z^+}\setminus\{1\}:f_{n+1}f_{n-1}={f_n}^2+(-1)^n$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 4}
+
+~
+
+\begin{enumerate}
+    \item Set the distance to the 30 ft tower $x$;
+    \item Same speed for the same time means the same distance for the two birds
+    \item $\sqrt{30^2+x^2}=\sqrt{40^2+(50-x)^2}$
+    \item $x^2+900=x^2-100x+4100$
+    \item $100x=3200\implies x=32$
+    \item $50-32=18$
+    \item So distance to the 30 ft tower is $\boxed{32 ft}$ and distance to the 40 ft tower is $\boxed{18 ft}$.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 5}
+
+~
+
+\begin{proof}
+    ~
+    \begin{enumerate}
+        \item WLOG: $\dfrac{a}{c}\leq\dfrac{b}{d}$
+        \item $ad\leq bc$
+        \item $\dfrac{a}{c}\leq \dfrac{a+b}{c+d}:$
+        \begin{enumerate}
+            \item $ac+ad=ac+ad$
+            \item So $\dfrac{a}{c}=\dfrac{a+\frac{ad}{c}}{c+d}$
+            \item $\dfrac{a+\frac{ad}{c}}{c+d}\leq \dfrac{a+\frac{bc}{c}}{c+d}=\dfrac{a+b}{c+d}$
+            \item $\dfrac{a}{c}\leq \dfrac{a+b}{c+d}$
+        \end{enumerate}
+        \item $\dfrac{a+b}{c+d}\leq \dfrac{b}{d}:$
+        \begin{enumerate}
+            \item $bc+bd=bc+bd$
+            \item So $\dfrac{b}{d}=\dfrac{\frac{bc}{d}+b}{c+d}$
+            \item $\dfrac{a+b}{c+d}=\dfrac{\frac{ad}{d}+b}{c+d}\leq\dfrac{\frac{bc}{d}+b}{c+d}$
+            \item $\dfrac{a+b}{c+d}\leq\dfrac{b}{d}$
+        \end{enumerate}
+        \item So $\dfrac{a+b}{c+d}$ lies between $\dfrac{a}{c}$ and $\dfrac{b}{d}$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 6}
+
+~
+
+\begin{enumerate}
+    \item $10^\frac{1}{2}<5$
+    \item $5\div 10^\frac{1}{2}\approx1.58114$
+    \item $10^\frac{1}{8}<1.58114$
+    \item $1.58114\div 10^\frac{1}{8}\approx1.18569$
+    \item $10^\frac{1}{16}<1.18569$
+    \item $1.18569\div10^\frac{1}{16}\approx1.02677$
+    \item $10^\frac{1}{128}<1.02677$
+    \item $1.02677\div10^\frac{1}{128}\approx1.00846$
+    \item $10^\frac{1}{512}<1.00846$
+    \item $1.00846\div10^\frac{1}{512}\approx1.00393$
+    \item $10^\frac{1}{1024}<1.00393$
+    \item $1.00393\div10^\frac{1}{1024}\approx1.00168$
+    \item $10^\frac{1}{2048}<1.00168$
+    \item $1.00168\div10^\frac{1}{2048}\approx1.00055$
+    \item So is $\boxed{\frac{1}{2}+\frac{1}{8}+\frac{1}{16}+\frac{1}{128}+\frac{1}{512}+\frac{1}{1024}+\frac{1}{2048}}$
+\end{enumerate}
+
+\newpage
+
+\section*{Question 7}
+
+~
+
+\begin{enumerate}
+    \item True: true independent to the Positum.
+    \item False: deny the Positum.
+    \item True: consistent as the Positum also as a neutral fact.
+    \item True: true independent to the Positum.
+    \item False: rectangles are circles and cats don't speak English, false disjunction.
+    \item False: false independent to the Positum.
+    \item True: true independent to the Positum.
+    \item True: true independent to the Positum.
+    \item True: this is a logical truth.
+    \item False: player 2 is following the rules correctly for the whole game.
+\end{enumerate}
+\end{document}

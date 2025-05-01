@@ -3,7 +3,8 @@
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{hyperref}
-\usepackage{natbib}
+\usepackage{amsrefs}
+\usepackage{amsrefs}
 
 \title{The Multicultural Genesis of Pascal’s Triangle}
 \author{Zian Kang}
@@ -43,7 +44,7 @@ The arithmetic triangle provides binomial coefficients for expanding \( (a + b)^
 1 & 3 & 3 & 1 \\
 \end{array}
 \]
-corresponding to the expansion:
+This corresponds to the expansion:
 \[
 (a + b)^3 = a^3 + 3a^2b + 3ab^2 + b^3
 \]
@@ -52,40 +53,27 @@ corresponding to the expansion:
 
 ~
 
-Choose \( a \) such that \( a^3 < N \):
-\[
-a = 10 \quad \text{(since \( 10^3 = 1000 \))}.
-\]
-
-Subtract \( a^3 \) from \( N \):
-\[
+The Iterative Approximation Method goes by the follows: First choose \( a \) such that \( a^3 < N \):$a = 10 \quad \text{(since \( 10^3 = 1000 \))}$. Subtract \( a^3 \) from \( N \):
+$
 N - a^3 = 1,\!728 - 1,\!000 = 728.
-\]
-
-Using the arithmetic triangle coefficients:
-\[
+$ So that 729 is the constant number of the following equation together with the arithmetic triangle coefficients of degrees 3:
+$
 3a^2b + 3ab^2 + b^3 = 728.
-\]
+$
 
-Substitute \( a = 10 \):
+Substitute \( a = 10 \) in order to solve the value for $b$:
 \begin{align*}
 3(10)^2b + 3(10)b^2 + b^3 &= 728 \\
 300b + 30b^2 + b^3 &= 728.
 \end{align*}
 
-Test integer values of \( b \):
-\[
+In order to solve the value for $b$, we need to test integer values of \( b \):
+$
 \text{Let \( b = 2 \):} \quad 300(2) + 30(2)^2 + (2)^3 = 600 + 120 + 8 = 728.
-\]
-
-Thus, \( b = 2 \).
-
-~
-
-Combine \( a \) and \( b \):
-\[
+$Thus, \( b = 2 \). And combining \( a \) and \( b \) we can get the final result: 
+$
 x = a + b = 10 + 2 = \boxed{12}.
-\]
+$
 \subsection{Analysis}
 ~
 Jia Xian's iterative root extraction parallels the Newton-Raphson method. For \( f(x) = x^3 - N \), the Newton-Raphson iteration is:
@@ -99,7 +87,7 @@ x_1 = 10 - \frac{10^3 - 1728}{3 \cdot 10^2} = 10 - \frac{-728}{300} \approx 12.4
 \]
 
 Jia Xian’s approximation \( x = 12 \) matches this result, demonstrating his method’s alignment with modern numerical analysis 
-\citep{lam1986}.
+\cite{lam1986}.
 
 \subsection{Comparative to Pascal}
 
@@ -107,7 +95,7 @@ While Jia Xian’s triangle solved polynomial equations for governance, European
 \[
 \binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}.
 \]
-This duality reflects cultural priorities: China’s state-driven algebra versus Europe’s market-driven combinatorics \citep{boyer1950, hinz1992}.
+This duality reflects cultural priorities: China’s state-driven algebra versus Europe’s market-driven combinatorics \cite{boyer1950, hinz1992}.
 
 \subsection{Historical Context}
 During the Northern Song Dynasty (960–1127 CE), a period renowned for its advancements in science and statecraft, the scholar-official Jia Xian (c. 1010–1070) emerged as a pivotal figure in the evolution of Chinese mathematics. Serving within the imperial bureaucracy, Jia Xian’s work was deeply intertwined with the practical demands of governance, including land measurement, tax assessment, and infrastructure planning. And thus the arithmetic triangle (Figure \ref{fig:jia}) became a tool for land surveys and taxation.His innovations arose not from abstract theorizing but from the necessity to standardize administrative processes, reflecting the Song Dynasty’s emphasis on precision and efficiency in statecraft.
@@ -125,69 +113,59 @@ During the Northern Song Dynasty (960–1127 CE), a period renowned for its adva
 
 \subsection{Mathematical Problem}
 
-While Jia Xian's Iterative method focuses only on integers, Yanghui employed iterative adjustments akin to Jia Xian’s cubic method so that the method is applicable for non-integer roots, demonstrating the triangle’s flexibility. One example for this expand of the method is his way to approximate $x^3=2000$ \citep{needham1993}
+While Jia Xian's Iterative method focuses only on integers, Yanghui employed iterative adjustments akin to Jia Xian’s cubic method so that the method is applicable for non-integer roots, demonstrating the triangle’s flexibility. One example for this expand of the method is his way to approximate $x^3=2000$ \cite{needham1993}
 
 \subsection{Mathematical Process}
 
-\subsubsection{Initial Guess}
-Find the largest integer \( a \) such that \( a^3 \leq 2000 \):
-\[
+We need to first have an initial guess for the variable, that is, to find the largest integer \( a \) such that \( a^3 \leq 2000 \):
+$
 12^3 = 1728 \quad \text{and} \quad 13^3 = 2,\!197 \quad \Rightarrow \quad a = 12.
-\]
-
-\subsubsection{Residual Calculation}
-Subtract \( a^3 \) from \( 2000 \):
-\[
+$. Then to calculate the residual between the initial guess and the number 2000, subtract \( a^3 \) from \( 2000 \):
+$
 2,\!000 - 12^3 = 2,\!000 - 1,\!728 = 272.
-\]
-
-\subsubsection{Polynomial Expansion}
-Using the arithmetic triangle's third row coefficients (1, 3, 3, 1) for \( (a + b)^3 \):
-\[
+$ Now use the arithmetic triangle's third row coefficients (1, 3, 3, 1) for \( (a + b)^3 \) to calculate the value for the residual:
+$
 (12 + b)^3 = 12^3 + 3 \cdot 12^2 \cdot b + 3 \cdot 12 \cdot b^2 + b^3
-\]
+$
 The residual equation becomes:
-\[
+$
 432b + 36b^2 + b^3 = 272.
-\]
-
-\subsubsection{Iterative Adjustment for \( b \)}
+$Then we iterate the value of $b$ for the solution of the equation:
 \begin{itemize}
-    \item \textbf{First Iteration}: Let \( b = 0.6 \):
+    \item Let \( b = 0.6 \):
     \[
-    432(0.6) + 36(0.6)^2 + (0.6)^3 = 259.2 + 12.96 + 0.216 = 272.376 \quad (\text{Too high})
+    432(0.6) + 36(0.6)^2 + (0.6)^3 = 259.2 + 12.96 + 0.216 = 272.376 \quad (\text{High})
     \]
     
-    \item \textbf{Second Iteration}: Let \( b = 0.59 \):
+    \item Let \( b = 0.59 \):
     \[
     432(0.59) + 36(0.59)^2 + (0.59)^3 \approx 254.88 + 12.34 + 0.205 \approx 267.43 \quad (\text{Too low})
     \]
     
-    \item \textbf{Third Iteration}: Let \( b = 0.595 \):
+    \item Let \( b = 0.595 \):
     \[
     432(0.595) + 36(0.595)^2 + (0.595)^3 \approx 256.44 + 12.69 + 0.211 \approx 269.34 \quad (\text{Closer})
     \]
 
-    \item \textbf{Third Iteration}: Let \( b = 0.599 \):
+    \item Let \( b = 0.599 \):
     \[
     432(0.599)+36(0.599)^2+(0.595)^3\approx 258.77+ 12.92+ 0.21 \approx 271.1 \quad(\text{Much Closer})
     \]
 \end{itemize}
 
-\subsubsection{Final Approximation}
+So the final approximation for $432b+36b^2+b^3=272$ and $x^3=200$ is:
 \[
 b \approx 0.599 \quad \Rightarrow \quad x = a + b = 12 + 0.599 = \boxed{12.599}.
 \]
 
-\subsubsection{Verification}
-The exact cube root of 2,000 is:
+And by wolfram mathematica, the exact cube root of 2,000 is:
 \[
 \sqrt[3]{2000} \approx 12.5992 \quad (\text{Error} < 0.01\%).
 \]
 
 \subsection{Historical Background}
 
-Yang Hui (c. 1238–1298) flourished during the Southern Song Dynasty (1127–1279), a period marked by both political turmoil and intellectual vigor. As a mathematician and scholar, Yang Hui inherited the algebraic traditions of his predecessor Jia Xian (c. 1010–1070) and refined them into a cohesive system. His work emerged against the backdrop of a dynasty increasingly reliant on mathematical precision for governance, trade, and engineering. Unlike Jia Xian, who served as a bureaucrat, Yang Hui operated as a private scholar, compiling and annotating mathematical texts to preserve and advance knowledge. His most famous work, \textit{Xiangjie Jiuzhang Suanfa} (“Detailed Analysis of the Nine Chapters on Mathematical Methods,” 1261) expanded Jia Xian's iteration method applications, ensuring its survival for future generations. His work influenced later mathematicians like Zhu Shijie (1249–1314), whose \textit{Siyuan Yujian} (“Precious Mirror of the Four Elements,” 1303) popularized the triangle across East Asia. Yang Hui’s vertical triangle (Figure \ref{fig:yang}) standardized imperial projects, symbolizing hierarchical order in governance \citep{needham1993}. Joseph Needham’s Science and Civilisation in China (1959) later highlighted Yang Hui’s contributions, challenging Eurocentric narratives.
+Yang Hui (c. 1238–1298) flourished during the Southern Song Dynasty (1127–1279), a period marked by both political turmoil and intellectual vigor. As a mathematician and scholar, Yang Hui inherited the algebraic traditions of his predecessor Jia Xian (c. 1010–1070) and refined them into a cohesive system. His work emerged against the backdrop of a dynasty increasingly reliant on mathematical precision for governance, trade, and engineering. Unlike Jia Xian, who served as a bureaucrat, Yang Hui operated as a private scholar, compiling and annotating mathematical texts to preserve and advance knowledge. His most famous work, \textit{Xiangjie Jiuzhang Suanfa} (“Detailed Analysis of the Nine Chapters on Mathematical Methods,” 1261) expanded Jia Xian's iteration method applications, ensuring its survival for future generations. His work influenced later mathematicians like Zhu Shijie (1249–1314), whose \textit{Siyuan Yujian} (“Precious Mirror of the Four Elements,” 1303) popularized the triangle across East Asia. Yang Hui’s vertical triangle (Figure \ref{fig:yang}) standardized imperial projects, symbolizing hierarchical order in governance \cite{needham1993}. Joseph Needham’s Science and Civilisation in China (1959) later highlighted Yang Hui’s contributions, challenging Eurocentric narratives.
 
 \section{Analysis between the Iteration method and the Newton-Raphson method}
 
@@ -196,94 +174,79 @@ Yang Hui (c. 1238–1298) flourished during the Southern Song Dynasty (1127–12
 Both methods iteratively refine an initial guess \(a\) to approximate the root of \(x^3 = N\) by minimizing the residual error \(R = N - a^3\).
 
 \subsection{Linear Approximation}
-\subsubsection{Yang Hui's Simplified Adjustment}
-Neglecting higher-order terms (\(3ab^2 + b^3\)):
+The first is their similarity on linear approximation, Yang Hui's Simplified Adjustment shows that after neglecting higher-order terms of \((3ab^2 + b^3)\), i.e. , the terms degree grater than 1:
 \[
 b \approx \frac{R}{3a^2} = \frac{N - a^3}{3a^2}.
 \]
-The updated guess becomes:
+After substituting $b$ into the original $x=a+b$, the updated guess becomes:
 \[
 x_{\text{new}} = a + \frac{N - a^3}{3a^2}.
 \]
 
-\subsubsection{Newton-Raphson Update Rule}
-Using the derivative \(f'(a) = 3a^2\):
+Newton-Raphson Update Rule approximates the value using the derivative \(f'(a) = 3a^2\):
 \[
 x_{n+1} = a - \frac{a^3 - N}{3a^2} = a + \frac{N - a^3}{3a^2}.
 \]
 
-\subsubsection{Mathematical Equivalence}
-When higher-order terms are ignored, both methods yield identical linearized updates:
+It is easy to see that, when higher-order terms are ignored, both methods yield identical linearized updates:
 \[
 \boxed{x_{\text{new}} = a + \frac{N - a^3}{3a^2}}
 \]
 
-\subsection{Residual Error}
-\subsubsection{Yang Hui's Full Equation}
-Retains cubic terms:
-\[
-3a^2b + 3ab^2 + b^3 = R.
-\]
-This accounts for curvature but requires iterative solving.
-
-\subsubsection{Newton-Raphson Simplification}
-Truncates the Taylor series after the linear term:
-\[
-f(a + b) \approx f(a) + f'(a)b = 0 \quad \Rightarrow \quad b = -\frac{f(a)}{f'(a)}.
-\]
-
-\subsection{Taylor Series Connection}
-Expanding \(f(a + b) = (a + b)^3 - N\) around \(a\):
+There is also connections between the two and the Taylor Series, by expanding \(f(a + b) = (a + b)^3 - N\) around \(a\):
 \[
 (a + b)^3 - N = (a^3 - N) + 3a^2b + 3ab^2 + b^3 = f(a)+f'(a)b+3ab^2+b^3=0.
 \]
-Newton-Raphson truncates after \(f'(a)b\) and then iterates; Yang Hui solves the full cubic equation \(3a^2b+3ab^2+b^3=R\) iteratively.
+Newton-Raphson truncates after \(f'(a)b\) and then iterates; Yang Hui solves the full cubic equation \(3a^2b+3ab^2+b^3=R\) iteratively. However, they are both in line with the Taylor Series expansion, showing that although there is no calculus involved, Yang Hui's method uses the concept of calculus to approximate the result.
 
+\section{Bridging East and West: Cultural Imperatives and Shared Structures}
+The arithmetic triangle’s journey across continents reveals a striking duality: while its recursive identity 
+$
+\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}
+$
+unified its mathematical structure, its applications diverged profoundly under distinct cultural imperatives. In Song China, the triangle emerged as a tool of statecraft, refined by Jia Xian and Yang Hui to solve polynomial equations critical for land surveys, taxation, and infrastructure. Its coefficients anchored iterative approximations that mirrored the dynasty’s bureaucratic precision, blending algebraic rigor with administrative necessity.
+
+By contrast, Renaissance Europe’s embrace of the triangle grew from commercial and ecclesiastical demands. As maritime trade expanded and gambling proliferated, scholars like Tartaglia sought combinatorial frameworks to quantify risk, while Apianus adapted the triangle’s modularity to simplify lunar computations for Easter dating. This divergence---state-driven algebra in the East versus market-driven combinatorics in the West---underscores how mathematical innovation is shaped by societal priorities. Yet beneath these differences lay a shared recognition of the triangle’s recursive power, a testament to its universality as a mathematical artifact.
 
 \section{Petrus Apianus’s Lunar Computations}
 
 \subsection{Mathematical Problems}
 
- Easter’s date depends on the first Sunday after the Paschal Full Moon, which follows the spring equinox.\citep{apianus1527} The challenge lay in predicting lunar phases across the 19-year Metonic cycle ($\approx$235 lunar months). Apianus’s innovation was using the arithmetic triangle’s 19th row to modularize these computations, making them accessible to Renaissance scholars and clergy. \citep{boyer1950}
+ Easter’s date depends on the first Sunday after the Paschal Full Moon, which follows the spring equinox.\cite{apianus1527} The challenge lay in predicting lunar phases across the 19-year Metonic cycle ($\approx$235 lunar months). Apianus’s innovation was using the arithmetic triangle’s 19th row to modularize these computations, making them accessible to Renaissance scholars and clergy. \cite{boyer1950}
 
 \subsection{Algorithm for Easter Date Calculation}
 
-\subsubsection{Step 1: Determine the Golden Number}
-The Golden Number \( G \) locates the year in the 19-year Metonic cycle:
+The first step is to determine the Golden Number. The Golden Number \( G \) locates the year in the 19-year Metonic cycle:
 \[
 G = (Y \mod 19) + 1
 \]
-Take 1527 as an example:
+In this case, the example is the year 1527
 \[
 G = (1527 \mod 19) + 1 = 7 + 1 = 8
 \]
 
-\subsubsection{Step 2: Reference the 19th Row of the Arithmetic Triangle}
-Apianus used the 19th row of the arithmetic triangle. Simplified entries:
+Then reference to the 19th row of the Triangle since it is a 19-year cycle, which is Apianus did.Apianus used the 19th row of the arithmetic triangle. Simplified entries for the row are:
 \[
 \begin{array}{cccccccc}
 1 & 19 & 171 & 969 & 3876 & \ldots & 50388 & \ldots \\
 \end{array}
 \]
-For \( G = 8 \), select the 8th entry:
+For \( G = 8 \), it suffices to use the 8th entry of the 19th row in the Triangle:
 \[
 \text{Entry} = 50388
 \]
 
-\subsubsection{Step 3: Compute the Lunar Offset}
-Convert the entry to days and reduce modulo 30:
+Now compute the lunar offset. Convert the entry to days and reduce modulo 30 since there is only 30 days in a month:
 \[
 \text{Offset} = \left\lfloor \frac{50388}{100} \right\rfloor \mod 30 = 503 \mod 30 = 23 \text{ days}
 \]
 
-\subsubsection{Step 4: Adjust the Base Date}
-Add the offset to March 21 (Julian calendar equinox):
+The base date for this number is March 21 in 1527, so we need to add the offset to March 21 (Julian calendar equinox):
 \[
 \text{Paschal Full Moon} = \text{March 21} + 23 \text{ days} = \text{April 13}
 \]
 
-\subsubsection{Step 5: Determine Easter Sunday}
-Find the first Sunday after April 13, 1527:
+So the Easter Sunday is just the first Sunday after April 13, 1527:
 \[
 \text{Easter} = \text{April 16}
 \]
@@ -297,7 +260,7 @@ Find the first Sunday after April 13, 1527:
 \subsubsection{Approximation Errors}
 \begin{itemize}
 \item \textbf{Lunar Month}: 29.53 days (exact) vs. 30 days (Apianus).
-\item \textbf{Accuracy}: ±1–2 days due to rounding \citep{meeus1991}.
+\item \textbf{Accuracy}: ±1–2 days due to rounding \cite{meeus1991}.
 \item \textbf{Cumulative Error}: \(235\times (30-29.53)=110.45\)days.
 \item \textbf{Error Propagation}: Annual Error $\approx \dfrac{110.45\text{ days}}{19\text{ years}}\approx 5.8 \text{ days/year}$
 \item \textbf{Modular Reduction}: Using $\mod{30}$ introduces cyclical inaccuracies, as residuals are truncated rather than fractionally adjusted.
@@ -307,50 +270,46 @@ Apianus’s errors were not failures but deliberate compromises to democratize l
 
 \begin{figure}[h!tbp]
 \centering
-\includegraphics[width=0.5\textwidth]{Essay/Draft_2/Apianus.jpg}
-\caption{Appearing on the title page of Kauffmans Rechnung (Ingolstadt, 1527) \citep{boyer1950}.}
+\includegraphics[width=0.2\textwidth]{Essay/Draft_2/Apianus.jpg}
+\caption{Appearing on the title page of Kauffmans Rechnung (Ingolstadt, 1527) \cite{boyer1950}.}
 \label{fig:apianus}
 \end{figure}
 
 \subsection{Historical Background}
 
-Petrus Apianus (1495–1552), a German astronomer and mathematician, integrated the arithmetic triangle into his 1527 almanac \textit{Practica auf Deutsch} to simplify the calculation of Easter dates. Apianus’s algorithm exemplifies pragmatic Renaissance mathematics, prioritizing usability over precision. While its approximations limited long-term accuracy, the method’s design—rooted in the arithmetic triangle—showcased early modern efforts to systematize celestial computations. Its historical value lies not in precision but in democratizing astronomy, bridging medieval scholarship and the Scientific Revolution. Apianus’s printed triangle (Figure \ref{fig:apianus}) catered to Europe’s literate middle class, blending astronomy with print culture\citep{boyer1950}. 
+Petrus Apianus (1495–1552), a German astronomer and mathematician, integrated the arithmetic triangle into his 1527 almanac \textit{Practica auf Deutsch} to simplify the calculation of Easter dates. Apianus’s algorithm exemplifies pragmatic Renaissance mathematics, prioritizing usability over precision. While its approximations limited long-term accuracy, the method’s design—rooted in the arithmetic triangle—showcased early modern efforts to systematize celestial computations. Its historical value lies not in precision but in democratizing astronomy, bridging medieval scholarship and the Scientific Revolution. Apianus’s printed triangle (Figure \ref{fig:apianus}) catered to Europe’s literate middle class, blending astronomy with print culture\cite{boyer1950}. 
 
 \section{Tartaglia’s Combinatorial Probability}
 
 \begin{figure}[h!tbp]
 \centering
 \includegraphics[width=0.3\textwidth]{Essay/Draft_2/Tartaglia.jpg}
-\caption{Tartaglia’s probability tables \citep{tartaglia1556}.}
+\caption{Tartaglia’s probability tables \cite{tartaglia1556}.}
 \label{fig:tartaglia}
 \end{figure}
 
 \subsection{Historical Background}
 
-Niccolò Tartaglia (1500–1557), an Italian mathematician of the Renaissance era, pioneered combinatorial probability in his General Trattato di Numeri et Misure (1556). His work linked the arithmetic triangle to dice probabilities, reflecting Europe’s burgeoning interest in risk quantification for commerce and games of chance \citep{tartaglia1556}. Tartaglia’s tables (Figure \ref{fig:tartaglia}) quantified risk for gamblers, reflecting Renaissance Europe’s market-driven ethos \citep{hinz1992}.
+Niccolò Tartaglia (1500–1557), an Italian mathematician of the Renaissance era, pioneered combinatorial probability in his General Trattato di Numeri et Misure (1556). His work linked the arithmetic triangle to dice probabilities, reflecting Europe’s burgeoning interest in risk quantification for commerce and games of chance \cite{tartaglia1556}. Tartaglia’s tables (Figure \ref{fig:tartaglia}) quantified risk for gamblers, reflecting Renaissance Europe’s market-driven ethos \cite{hinz1992}.
 
 \subsection{Mathematical Statement}
 
 Tartaglia tried to use the table to calculate the probability of rolling a sum of 7 with two six-sided dice.
 
 \subsection{Tartaglia's Method Using the Arithmetic Triangle}
-\subsubsection{Step 1: Total Outcomes}
-Two dice yield:
+First is to calculate the total outcomes of the two dices using combinatorics. Two dices yield:
 \[
 6 \times 6 = 36 \text{ total outcomes}.
 \]
 
-\subsubsection{Step 2: Favorable Outcomes}
-Tartaglia used the second row of the arithmetic triangle (1, 2, 1) to count combinations, later corrected to:
+Tartaglia first used the second row of the arithmetic triangle (1, 2, 1) to count combinations, however, he later used the six sided version of the arithmetic triangle, which has the second row being:
 \[
 \begin{array}{cccccccccccc}
 \text{Sum} & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 \\
 \text{Ways} & 1 & 2 & 3 & 4 & 5 & 6 & 5 & 4 & 3 & 2 & 1 \\
 \end{array}
 \]
-For sum \(7\), there are 6 favorable outcomes: \((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\) \citep{hald1990}.
-
-\subsubsection{Step 3: Probability Calculation}
+For sum \(7\), there are 6 favorable outcomes: \((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\) \cite{hald1990}. Then it is easy to calculate the probability, since it only needs to divide the favorable outcomes with total outcomes: 
 \[
 P(\text{sum } 7) = \frac{\text{Favorable}}{\text{Total}} = \frac{6}{36} = \frac{1}{6}.
 \]
@@ -364,7 +323,7 @@ The number of ways to roll sum \(k\) with \(n\) dice is the coefficient of \(x^k
 \[
 (x + x^2 + \cdots + x^6)^n.
 \]
-For \(n = 2\), the coefficient of \(x^7\) is 6 \citep{pascal1654}.
+For \(n = 2\), the coefficient of \(x^7\) is 6 \cite{pascal1654}.
 
 \subsubsection{Modern Generalization}
 For \(n\) dice, the number of ways to roll sum \(k\) is:
@@ -396,8 +355,8 @@ This shared some similarities with the recursive rule for arithmetic triangle:
 
 \subsection{Error Analysis}
 \begin{itemize}
-\item \textbf{Initial Limitations}: Tartaglia's incomplete triangle undercounted sums (e.g., sum 4 as 1 vs. actual 3) \citep{tartaglia1556}.
-\item \textbf{Refinements}: Pascal and Fermat expanded the triangle and formalized expectation theory \citep{pascal1654}.
+\item \textbf{Initial Limitations}: Tartaglia's incomplete triangle undercounted sums (e.g., sum 4 as 1 vs. actual 3) \cite{tartaglia1556}.
+\item \textbf{Refinements}: Pascal and Fermat expanded the triangle and formalized expectation theory \cite{pascal1654}.
 \end{itemize}
 
 \section{Conclusion}
@@ -406,12 +365,6 @@ Jia Xian’s iterative root extraction and Yang Hui’s refinements exemplify th
 
 \newpage
 
-\bibliographystyle{plainnat}
-\bibliography{reference}
+\bibliography{Essay/Draft_2/reference}
 
-\newpage
-
-\section{Reflection}
-
-I think the Tartaglia part needs some more details. And perhaps some comparison with Chinese and European? I think there should be some connections between different sections, but some relations are included in the introduction and conclusion sections. Perhaps the math content is not that much?
 \end{document}
