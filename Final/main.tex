@@ -1,0 +1,278 @@
+\documentclass{article}
+\usepackage{amsmath, amssymb , amsthm, graphicx,mathtools,amsrefs}
+
+\begin{document}
+
+\section*{Honor Pledge}
+
+I affirm that I will not give or receive any unauthorized help on this exam,
+and all work will be my own.
+
+Zian Kang
+\newpage
+\section*{Question 1}
+
+\includegraphics[width=0.5\textwidth]{Final/1_1.jpg}
+
+\begin{enumerate}
+    \item Draw a circle $C$ and a line $\ell$ not intersecting each other;
+    \item Take three random points on the circle $A$ $B$ $D$;
+    \item Connect $AC$ $AB$;
+    \item Use the compass to mark four arcs with the same radius, two from $A$, two from $B$, and two above $AB$, two below $AB$;
+    \item The four arcs intersect in two two points, connect the intersection, the line is the bisector of $AB$ since all the points on the line are equidistant to $AB$;
+    \item Do the same operation on $AD$ to find the bisector of $AD$;
+    \item The two bisectors intersect at point $O$;
+    \item $OA=OD=OB$, so $O$ is the center of the circle $C$;
+    \item The point closest to the circle must have its line with $O$ perpendicular to $\ell$ since the closest distance between a point and line is the perpendicular and the center is equidistant to every point on the circle;
+    \item Draw two arcs from $O$ with the same radius to intersect with $\ell$ at two points;
+    \item Use the same radius, draw arcs from each of the intersection at the two points, intersecting at a point different than $O$;
+    \item Connect the point and $O$ intersecting $\ell$ at $E$, $OE$ is the perpendicular line to $\ell$ passing $O$ since the four points by this construction form a rhombus and the diagonals are perpendicular to each other, with $OE$ and $\ell$ being the diagonals, they are perpendicular.
+    \item So $E$ is the point on $\ell$ closest to circle $C$.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 2}
+
+\subsection*{1}
+
+\includegraphics[width=0.5\textwidth]{Final/1_2_1.jpg}
+
+\begin{enumerate}
+    \item Draw a triangle $ABC$
+    \item Use the compass to mark four arcs with the same radius, two from $A$, two from $B$, and two above $AB$, two below $AB$;
+    \item The four arcs intersect in two two points, connect the intersection, the line is the bisector of $AB$ since all the points on the line are equidistant to $AB$;
+    \item Do the same operation on $BC$ to find the bisector of $BC$;
+    \item The two bisectors intersect at point $O$;
+    \item $OA=OC=OB$, so $O$ is the center of the circle circumscribing triangle $ABC$;
+    \item Draw a circle with radius $OA$ at center $O$, the circle $O$ is the circumscribing circle of triangle $ABC$.
+\end{enumerate}
+
+\subsection*{2}
+
+\includegraphics[width=0.5\textwidth]{Final/1_2_3.png}
+
+\begin{proof}
+~
+    \begin{enumerate}
+        \item $\angle BAD=\angle BCD$ since they are the inscribe angle of the same chord;
+        \item $\angle AGI=\angle HGC$, $\angle AIG=GHC$, so $\angle IAG=\angle GCH$;
+        \item So $\angle GCH=\angle DCH$;
+        \item $\triangle GCD\cong \triangle HCD$ (ASA):
+        \begin{enumerate}
+            \item $\angle GCH=\angle DCH$;
+            \item $CH=CH$;
+            \item $\angle GHC=\angle DHC=90^\circ$;
+        \end{enumerate}
+        \item $CG=CD$;
+        \item $\triangle BCG\cong \triangle BCD$ (SAS):
+        \begin{enumerate}
+            \item $BC=BC$;
+            \item $\angle BCG=\angle BCD$;
+            \item $CG=CD$;
+        \end{enumerate}
+        \item So $A_{\triangle BCG}=A_{\triangle BCD}$;
+        \item By the same method applied to $\triangle ABF$ and $\triangle ABG$, $\triangle ACG$ and $\triangle ACE$:
+        \begin{enumerate}
+            \item $A_{\triangle ABF}=A_{\triangle ABG}$;
+            \item $A_{\triangle ACG}=A_{\triangle ACE}$
+        \end{enumerate}
+        \item $A_{AFBDCE}=A_{\triangle BCG}+A_{\triangle BCD}+A_{\triangle ABF}+A_{\triangle ABG}+A_{\triangle ACG}+A_{\triangle ACE}$
+        \item So $A_{AFBDCE}= 2(A_{\triangle BCG}+A_{\triangle ABG}+A_{\triangle ACG})=2A_{\triangle ABC}$
+    \end{enumerate}
+\end{proof}
+
+\newpage
+
+\section*{Question 3}
+
+\begin{enumerate}
+    \item The document is giving a way of solving the equation $60(x-1)\cdot 30x=375$;
+    \item In the solution, it uses a false length technique by setting the unknown value to 1, the false value;
+    \item By multiplying the false length 60 and 30, the false length is 60 and the false width is 30;
+    \item So the false area is 1800, multiply to the true area, we get $1800\cdot 375=675000$;
+    \item Since 1 cubit has been taken, it needs to be modified: $\frac{5}{60}\cdot 60\cdot 30=150$;
+    \item By binomial, take the half of the modification $150\div 2=75$;
+    \item The square by this modification is $75^2=5625$;
+    \item Add the area modification to the area: $675000+5625=680625$;
+    \item Square root of the area is $\sqrt{680625}=825$;
+    \item Then add the modification $75$: $825+75=900$;
+    \item Now this is the false value of the reed, we need to divide by the false area: $900\div 1800=0.5$;
+    \item So the width of the reed is $0.5$.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 4}
+
+\begin{enumerate}
+    \item This first step is to multiply the diameter by 4 and multiply the sum of $(-1)^n\frac{1}{2n+1}$ starting from $n=0$, that is, $4D\left(\sum_{n=0}^{\infty}(-1)^n\frac{1}{2n+1}\right)$;
+    \item To approximate the value, if the sum goes to $n=k$, the final term is $(-1)^k\frac{1}{2k+1}$, then the numerator of the last term is $k+1$;
+    \item The denominator of the last term is $(2k+2)^2+1$ and the sign should be $(-1)^{k+1}$;
+    \item So the circumference at precision $n=k$ is $4D\left(\sum_{n=0}^{k}(-1)^n\frac{1}{2n+1}+(-1)^{k+1}\frac{k+1}{(2k+2)^2+1}\right)$;
+    \item this is a direct usage of the Leibniz-Gregory series for $\pi$ and $(-1)^{k+1}\frac{k+1}{(2k+2)^2+1}$ is the estimation of the leftover part of the series.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 5}
+
+\begin{enumerate}
+    \item For product $mn$, and $n=\sum^{k}_{i=1}n_i$, then $mn=\sum^{k}_{i=1}mn_i$;
+    \item For $m=a+b$, $m^2+a^2=b^2+2am$, this is the same as $(a+b)^2=a^2+2ab+b^2$;
+    \item $m^2+a^2$ is also equal to $\frac{b^2}{2}+2(a+\frac{b}{2})^2$, by expansion and simplification of it: $\frac{b^2}{2}+2(a+\frac{b}{2})^2=b^2+2ab+2a^2=(a+b)^2+a^2=m^2+a^2$;
+    \item $am=a^2+ab$, which is obvious from $a(a+b)=a^2+ab$;
+    \item For $m=ab$ and $n=cd$, then $mn= (((ab)c)d)$, this is one of the multiplication rule;
+    \item Then as an corollary, $(ab)c=a(bc)$ and $ab^2=(ab)b$, both by multiplication rules;
+    \item For $(+a)(+b)$ and $(-a)(-b)$, the result is both $(+ab)$, since $(+1)\times (+1)=+1$ and $(-1)\times (-1)=+1$.
+    \item For $(+a)(-b)$ and $(-a)(+b)$, the result is both $(-ab)$, since $(+1)\times (-1)=-1$ and $(-1)\times (+1)=-1$.
+\end{enumerate}
+\newpage
+\section*{Question 6}
+
+\begin{center}
+\begin{tabular}{ccc}
+        19&  1&/\\
+        38 & 2&\\
+        76&4&/\\
+\end{tabular}
+
+\end{center}
+
+
+\begin{enumerate}
+    \item $88-19\times 4=12$;
+    \item Method 1: \begin{enumerate}
+        \item Consider $\frac{2}{19}$: $\frac{2}{19}=\frac{1}{12}+\frac{1}{76}+\frac{1}{114}$(By Rhind Papyrus);
+\item So $\frac{12}{19}=\frac{1}{2}+\frac{3}{38}+\frac{1}{19}$;
+\item $\frac{12}{19}=\frac{1}{2}+\frac{3}{38}+\frac{1}{19}= \frac{1}{2}+\frac{1}{38}+\frac{2}{19}$;
+\item Then use the Rhind Papyrus again: $\frac{12}{19}=\frac{1}{2}+\frac{1}{38}+\frac{1}{12}+\frac{1}{76}+\frac{1}{114}$;
+\item So $\frac{88}{19}=4\frac{1}{2}\frac{1}{12}\frac{1}{38}\frac{1}{76}\frac{1}{114}$;
+    \end{enumerate}
+    \item Method 2: \begin{enumerate}
+        \item $\frac{12}{19}>\frac{1}{2}$, so $\frac{12}{19}-\frac{1}{2}=\frac{5}{38}$;
+        \item $\frac{1}{4}>\frac{5}{38}>\frac{1}{8}$, so $\frac{5}{38}-\frac{1}{8}=\frac{1}{152}$;
+        \item So $\frac{12}{19}=\frac{1}{2}+\frac{1}{8}+\frac{1}{152}$;
+        \item $\frac{88}{19}=4\frac{1}{2}\frac{1}{8}\frac{1}{152}$;
+    \end{enumerate}
+\end{enumerate}
+
+\newpage
+
+\section*{Question 7}
+
+\begin{enumerate}
+    \item \begin{enumerate}
+        \item $N=31a+3$;
+        \item $N=18b+6$;
+    \end{enumerate}
+    \item So $31a-18b=3$;
+    \item $31\times 3-18\times 5=3$;
+    \item So $(3,5)$ is a solution;
+    \item $N=31\times 3+3=96=18\times 5+6$;
+    \item So 96 is the smallest possible answer.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 8}
+
+\begin{enumerate}
+    \item Write 11 in pairs of 3 with zeros: $011.000,000,000,000$;
+    \item Set $\sqrt[3]{11}\approx N=a.bcde$;
+    \item Find the largest $a$: $a^3<11\implies a=2$;
+    \item $011.000,000,000,000-2^3=3.000,000,000,000$;
+    \item Bring down three zeros, find greatest $b$: $b(20^2\times3+20\times 3b+b^2)<3000$ ;
+    \item $2(1200+120+4)<3000$, so the greatest $b$ is 2;
+    \item Current estimation is 2.2;
+    \item $3000-2648=352$;
+    \item Bring down three zeros, find the largest $c$: $c((2.2\times 10^2)^2\times 3+(2.2\times 10^2)\times 3c+c^2)<352000$;
+    \item $2((2.2\times 10^2)^2\times 3+(2.2\times 10^2)\times 3\times 2+2^2)=293048<352000$, so the greatest $c$ is 2;
+    \item Current estimation is 2.22;
+    \item $352000-293048=58952$;
+    \item Bring down three zeros, find the largest $d$: $d((2.22\times 10^3)^2\times 3+(2.22\times 10^3)\times 3d+d^2)<58952000$;
+    \item $3((2.22\times 10^3)^2\times 3+(2.22\times 10^3)\times 3\times 3+3^2)=44415567<58952000$, so the greatest $d$ is 3;
+    \item Current estimation is 2.223;
+    \item $58952000-44415567=14536433$;
+    \item Bring down three zeros, find the largest $e$: $e((2.223\times 10^4)^2\times 3+(2.223\times 10^4)\times 3e+e^2)<14536433000$;
+    \item $9((2.223\times 10^4)^2\times 3+(2.223\times 10^4)\times 3\times 9+9^2)=13348070919<14536433000$, so the greatest $e$ is 9;
+    \item Current estimation is 2.2239;
+    \item So $N=2.2239\approx 2.224$;
+    \item $\sqrt[3]{11}\approx2.224$.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 9}
+
+\begin{enumerate}
+    \item $x^4-2x^2-9x+10=(x^2-2)^2+2x^2-9x+6=0$
+    \item So $(x^2-2)^2=-2x^2+9x-6$;
+    \item Set a $z$ on left side to form a perfect square: $(x^2-2+z)^2=(x^2-2)^2+2x^2z+z^2-4z$
+    \item $(x^2-2+z)^2=-2x^2+9x-6+2x^2z+z^2-4z=(2z-2)x^2+9x+(z^2-4z-6)$
+    \item Force the left to be a perfect square, so $\Delta=0$:
+    \begin{enumerate}
+        \item $81-4(2z-2)(z^2-4z-6)=0$
+        \item $8z^3-40z^2-16z-33=0$
+        \item From the question: $z= \frac{11}{2}$
+    \end{enumerate}
+    \item $(x^2-2+\frac{11}{2})^2=(x^2+\frac{7}{2})^2=9x^2+9x+\frac{9}{4}=(3x+\frac{3}{2})^2$
+    \item \begin{enumerate}
+        \item $x^2+\frac{7}{2}=3x+\frac{3}{2}$
+        \item $x^2+\frac{7}{2}=-(3x+\frac{3}{2})$
+    \end{enumerate}
+    \item \begin{enumerate}
+        \item $x^2-3x+2=0$
+        \item $x^2+3x+5=0$
+    \end{enumerate}
+    \item $\begin{cases}
+        x_1=1\\
+        x_2=2\\
+        x_3=\frac{-3+\sqrt{11}i}{2}\\
+        x_4=\frac{-3-\sqrt{11}i}{2}
+    \end{cases}$
+\end{enumerate}
+
+\newpage
+
+\section*{Question 10}
+
+\begin{enumerate}
+    \item Madhava contributed the infinite series expansion for $\pi$ and some foundational calculus concepts. He derived infinite series expansions for trigonometric functions like sine and cosine, and for $\pi$: $\pi\approx 4(1-\frac{1}{3}+\frac{1}{5}-\frac{1}{7}...$. These works came before European works by centuries. His methods laid the groundwork for integral calculus and series approximations, yet his contributions were overlooked in Western narratives until modern scholarship recognized his contributions to mathematics.\cite{joseph1991crest}
+    \item Parameshvara laid groundwork for observational astronomy and iterative numeral methods. Parameshvara developed the Drgganita system, refining astronomical calculations through repeated observations. He also contributed to cyclic quadrilaterals and spherical trigonometry. His iterative techniques for solving equations and astronomical models influenced later Indian mathematics but were overlooked by the European mathematics.\cite{joseph1991crest}
+    \item Nilakantha Somayaji refined infinite series and planetary models. In his work \textit{Tantrasangraha}, Nilakantha expanded on Madhava’s work, deriving precise planetary equations and refining series expansions for sine and cosine. He also proposed a seemingly heliocentric model of the solar system, which is independent from Copernicus's work. His work demonstrated sophisticated calculus-like reasoning centuries before Newton, yet remained confined to regional scholarship.\cite{joseph1991crest}
+\end{enumerate}
+
+\newpage
+
+\section*{Question 11}
+
+\begin{enumerate}
+    \item The traditional narrative that European mathematics developed primarily as a continuation of ancient Greek thought is incomplete because it ignores groundbreaking contributions from India, particularly in arithmetic, algebra, and calculus-like methods. Below are key Indian innovations, as detailed in George Gheverghese Joseph’s The Crest of the Peacock, that challenge this Eurocentric view.
+    \item Indian mathematicians formalized the base-10 decimal system, including the concept of zero (śūnya), by the 5th century CE. Brahmagupta established rules for arithmetic with zero and negative numbers in his \textit{Brahmasphutasiddhanta}. His system, transmitted to Europe via Islamic scholars like Al-Khwarizmi, revolutionized computation. Without it, advanced algebra, calculus, and modern science would be inconceivable. As Joseph notes, “The Indian numeral system is the closest thing we have to a universal language”. \cite{joseph1991crest}
+    \item Āryabhaṭa solved indeterminate equations (kuttaka method) and tabulated sine values, foundational for trigonometry and Bhāskara II advanced algebraic techniques, solving quadratic equations and exploring differential calculus concepts in \textit{Līlāvatī}. These methods were transmitted to the Islamic world and later Europe, forming the basis of Renaissance algebra. \cite{joseph1991crest}
+    \item Indian innovations show that mathematical advancement was not a linear “Greek-to-Europe” trajectory but a global process with multiple centers. Also the Kerala School’s infinite series disprove the Eurocentric claim that calculus originated solely with Newton and Leibniz, further proving its multi-central-ness.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 12}
+
+\begin{enumerate}
+    \item Chinese mathematicians developed negative numbers and decimal place-value systems independently, proving that critical concepts emerged globally, not just in Greece or Europe. This dispels myths of Western superiority and highlights mathematics as a shared human achievement. As Joseph writes, Mathematics is not the monopoly of any one culture .\cite{joseph1991crest} This illustrates that the human culture is a universal development, not only a burst within several regions. This can help us better understand the culture development throughout human history. 
+    \item The Chinese Remainder Theorem, used today in cryptography, originated in Sunzi’s Mathematical Manual (3rd–5th century CE). It later spread to India, the Islamic world, and Europe, demonstrating cross-cultural transmission. Mathematics always have connections among culture throughout history. Ignoring these connections risks erasing collaborative progress.
+    \item Chinese mathematicians prioritized algorithmic reasoning over axiomatic proof, offering alternative problem-solving frameworks. And by letting students learning those different methodologies, they can have a better understanding of each knowledge and stimulates creativity and have a basic thinking of Dialectics.
+\end{enumerate}
+
+\newpage
+
+\section*{Question 13}
+
+\begin{enumerate}
+    \item Pascal’s Triangle captivates learners of all ages with its simplicity, depth, and multicultural legacy. While named after Blaise Pascal, its origins span ancient China, Persia, India, and the Islamic world. In China, it appeared as Yang Hui’s Triangle for polynomial expansions, while Persian scholars like Al-Karaji studied binomial coefficients centuries earlier. Sanskrit texts in India referenced the Meru Prastāra for poetic meter calculations. This global lineage highlights mathematics as a shared human endeavor, transcending cultural and geographical boundaries. \cite{joseph1991crest}
+    \item The triangle’s applications are astonishingly diverse. It underpins probability theory, predicting outcomes in games like coin flips, and simplifies polynomial expansions through the binomial theorem. In number theory, it hides sequences like Fibonacci numbers and primes, while its fractal patterns merge art with mathematics. These connections reveal how a simple triangular array bridges abstract concepts and real-world phenomena, from algebra to computer science.
+    \item As \textit{The Crest of the Peacock} emphasizes, Pascal’s Triangle exemplifies mathematics as a collaborative, evolving discipline.\cite{joseph1991crest} Teaching its history alongside its properties challenges Eurocentric narratives, celebrating contributions from non-central cultures. It transforms math from a academically dense subject into a joyful, inclusive exploration, proving that curiosity and play are at the heart of discovery.
+\end{enumerate}
+\newpage
+\bibliography{Final/reference}
+\end{document}
